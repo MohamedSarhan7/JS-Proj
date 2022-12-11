@@ -1,0 +1,29 @@
+.slider{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 100px;
+    height: 50vh;
+    max-height: 50vh;
+    border: 2px red solid;
+    /* background-color: white; */
+}
+.slider img {
+    max-width: 700px;
+    width: 700px;
+    max-height: 300px;
+    object-fit: contain;
+    
+}
+.slider button{
+    width: 60px;
+    height: 50px;
+}
+.slider-btn button{
+    margin: 25vh 0px;
+    border-radius: 24px;
+    /* background-color: rgb(240, 248, 255); */
+    border: 2px gray solid;
+    font-size: 25px;
+    color: rgba(0, 0, 0, .5);
+
+}
