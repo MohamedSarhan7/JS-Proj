@@ -1,5 +1,5 @@
 const arr = [
-    "../assets/slider-imgs/1.jpg",
+    "./assets/slider-imgs/1.jpg",
     "../assets/slider-imgs/2.jpg",
     "../assets/slider-imgs/3.jpg",
     "../assets/slider-imgs/4.jpg"]
