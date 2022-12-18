@@ -7,5 +7,5 @@ up.addEventListener("click", function (e) {
 
 let logo = document.querySelector("#logo");
 logo.addEventListener("click", () => {
-    open("../index.html","_self");
+    open("./index.html","_self");
 });
