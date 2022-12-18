@@ -1,0 +1,63 @@
+h2{
+    text-align: center;
+    padding-top: 10px;
+
+}
+#form{
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+div label{
+    height: 20px;
+}
+
+.input div {
+padding: 8px;
+
+}
+
+input{
+    outline: none;
+    border: none;
+    border: none;
+    height: 35px;
+    width: 400px;
+    padding: 5px 16px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    transition: background .3s;
+}
+input:hover ,textarea:hover{
+    background: rgba(230, 226, 226, 0.2);
+}
+textarea{
+    height: 200px;
+    width: 400px;
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    resize: none;
+    font-family: sans-serif;
+    font-size: 16px;
+        transition: background .3s;
+}
+#sub-div {
+    text-align: center;
+}
+#submit{
+    border-radius: 3px;
+    width: 150px;
+    cursor: pointer;
+        color: white;
+        font-size: 18px;
+    background-color: rgb(55, 158, 192);
+}
+
+.name-err,.email-err , .msg-err{
+    display: none;
+    padding: 0;
+    color: red;
+}

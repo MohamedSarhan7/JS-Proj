@@ -1,0 +1,13 @@
+.sec-1{
+display: flex;
+justify-content: space-around;
+padding: 50px;
+}
+
+
+.l-img img{
+    width: 700px;
+    height: 500px;
+    max-width: 1000px;
+    max-height: 1000px;
+}

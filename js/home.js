@@ -1,16 +1,58 @@
+import * as productLib from "./product.js";
+import * as cardLib from "./card.js";
+class Product {
+    constructor(title, img, price, category) {
+        this.title = title;
+        this.img = img;
+        this.price = price;
+        this.category = category;
 
-var up = document.getElementById("top");
-up.addEventListener("click", function (e) {
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-});
-function getCardCount() {
-
-    return JSON.parse(localStorage.getItem("cardcount") || "");
+    }
 }
 
-function saveCardCount(num) {
-    localStorage.setItem("cardcount", JSON.stringify(num));
+
+const content = document.querySelector(".content");
+const cardSpan = document.getElementById("cardspan");
+cardSpan.innerText = `${cardLib.getCardCount()}`;
+
+var products = [];
+let k;
+for (k = 1; k <= 9; k++) {
+    products.push(new Product(`table ${k}`, `./assets/tables/${k}.jpg`, '$10.00', "tables"));
+    products.push(new Product(` pen ${k} `, `./assets/pens/${k}.jpg`, '$5.60', "pens"));
+}
+
+
+for (k = 1; k <= 5; k++) {
+    products.push(new Product(` headphone ${k}`, `./assets/headphones/${k}.jpg`, '$5.60', "headphones"));
 
 }
+
+
+
+
+
+const filterBtn = document.querySelectorAll(".cat-btn button");
+
+filterBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+        let filteredProducts = products.filter(product => {
+
+            return product.category === btn.innerHTML.toLowerCase().trim();
+        });
+        
+        content.textContent = "";
+
+        if (btn.innerHTML.toLowerCase().trim() != "all") {
+            
+            productLib.createItems(filteredProducts);
+
+        }else{
+            
+            productLib.createItems(products);
+        }
+
+    });
+})
+
+productLib.createItems(products);

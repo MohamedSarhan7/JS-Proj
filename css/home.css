@@ -12,11 +12,12 @@ main{
 }
 h1{
 
-    /* font-family: 'Corinthia', 'cursive'; */
+
     font-family: 'La Belle Aurore', 'cursive';
     font-size: 24px;
    font-weight: bold;
 cursor: pointer;
+color: rgb(25, 127, 161);
 }
 
 
@@ -31,6 +32,8 @@ ul ,li , a{
 }
 
 header{
+    position: sticky;
+    top: 0;
     height: 50px;
     display: flex;
     justify-content: space-between;
@@ -48,9 +51,21 @@ header a{
 header a:hover{
     font-weight: bold;
 }
+#card-num{
+    display: flex;
+    justify-content: center;
+    
+}
+header img{
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+}
 
 #cardspan{
+padding: 5px;
     font-size: 18px;
+margin: auto;
 }
 
 
@@ -59,25 +74,41 @@ header a:hover{
 /* blabla */
 .blabla{
     padding: 100px;
+    column-count: 1;
+            /* font-family: 'Changa', 'sans-serif'; */
     
+}
+h2 {
+    column-span: all;
 }
 /* cat-btn */
 .cat-main{
     display: flex;
     flex-direction: column;
-    border: 2px red solid;
+
 }
 .cat-btn{
 
-    padding: 20px;
+    padding: 20px 100px;
     display: grid;
     grid-template-columns: repeat(auto-fill, 150px);
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+   
 }
 .cat-btn button{
+    border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
     height: 50px;
+    background-color: rgb(25, 127, 161);
+        text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+
 }
 
 .content{
@@ -116,7 +147,7 @@ header a:hover{
     outline: 0;
     padding: 12px;
     color: white;
-    background-color: #000;
+    background-color:  rgb(25, 127, 161);
     text-align: center;
     cursor: pointer;
     width: 100%;
@@ -124,16 +155,16 @@ header a:hover{
 }
 footer {
     margin-bottom: 0px;
-    background-color: antiquewhite;
-    border: 2px green solid;
+    
+
+    text-align: center;
 }
-footer{
-    align-items: right;
-}
+
 #top{
     position: fixed;
     width: 40px;
     height: 40px;
     bottom: 20px;
     right: 20px;
+    cursor: pointer;
 }
