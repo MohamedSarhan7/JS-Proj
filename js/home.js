@@ -10,7 +10,17 @@ class Product {
     }
 }
 
-
+function setLocal(){
+console.log("sadfafdaf");
+    let flag = localStorage.getItem("cardcountflag") || "";
+    if(flag===""){
+        localStorage.setItem("cardcountflag", "true");
+        localStorage.setItem("cardcount", 0);
+        console.log("object");
+    }
+    
+}
+setLocal();
 const content = document.querySelector(".content");
 const cardSpan = document.getElementById("cardspan");
 cardSpan.innerText = `${cardLib.getCardCount()}`;

@@ -5,7 +5,7 @@ up.addEventListener("click", function (e) {
 
 });
 
-let logo = document.querySelector("#logo");
-logo.addEventListener("click", () => {
-    open("./index.html","_self");
-});
+// let logo = document.querySelector("#logo");
+function logoClick(){
+    open("../index.html","_self");
+}
