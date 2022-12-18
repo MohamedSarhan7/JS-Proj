@@ -40,15 +40,15 @@ filterBtn.forEach(btn => {
 
             return product.category === btn.innerHTML.toLowerCase().trim();
         });
-        
+
         content.textContent = "";
 
         if (btn.innerHTML.toLowerCase().trim() != "all") {
-            
+
             productLib.createItems(filteredProducts);
 
-        }else{
-            
+        } else {
+
             productLib.createItems(products);
         }
 
@@ -56,3 +56,27 @@ filterBtn.forEach(btn => {
 })
 
 productLib.createItems(products);
+
+$(".card img").on({
+
+    mousemove(e) {
+        // console.log($(this).find("p:first").text());
+        $("#flay-card p:first").text($(this).parent().find("p:first").text());
+        $("#flay-card p:last").text("Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi eligendi molestias voluptatibus");
+        // $("#flay-card img").attr("src", $(this).find("img").attr("src"));
+        $("#flay-card img").attr("src", $(this).attr("src"));
+        $('#flay-card').css({
+            display: "block",
+            left: e.pageX + 20,
+            top: e.pageY + 20,
+
+        })
+    },
+    mouseleave() {
+        $('#flay-card').css({
+
+            display: "none",
+        })
+    }
+});
+

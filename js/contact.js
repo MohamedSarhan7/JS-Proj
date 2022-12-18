@@ -1,3 +1,7 @@
+import * as cardLib from "./card.js";
+const cardSpan = document.getElementById("cardspan");
+cardSpan.innerText = `${cardLib.getCardCount()}`;
+
 const form = document.querySelector("#form");
 let userName = form.name;
 let email = form.email;
@@ -25,6 +29,7 @@ function checkUserName() {
         return true;
     } else {
         nameErr.style.display = "none";
+
         return false;
     }
 }
